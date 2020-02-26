@@ -7,12 +7,6 @@ const webpack = require('webpack');
 const WebpackBar = require('webpackbar');
 require('pretty-error').start();
 const DashboardPlugin = require('webpack-dashboard/plugin');
-// enable when you need cool stuff
-// const Jarvis = require('webpack-jarvis');
-// enable when you want to check sizes.
-// const WebpackMonitor = require('webpack-monitor');
-// const BundleAnalyzerPlugin = require('@bundle-analyzer/webpack-plugin');
-const WebpackShower = require('webpack-shower');
 
 module.exports = options => ({
   mode: options.mode,
@@ -135,15 +129,6 @@ module.exports = options => ({
     }),
     new WebpackBar(),
     new DashboardPlugin(),
-    new WebpackShower(),
-    // new Jarvis({
-    //   port: 3001,
-    //   watchOnly: false, // optional: set a port
-    // }),
-    // new WebpackMonitor({
-    //   capture: true,
-    //   launch: true,
-    // }),
   ]),
   resolve: {
     modules: ['node_modules', 'app'],
@@ -152,9 +137,6 @@ module.exports = options => ({
     alias: {
       'react-dom': '@hot-loader/react-dom',
     },
-  },
-  stats: {
-    all: false,
   },
   devtool: options.devtool,
   target: 'web', // Make web variables accessible to webpack, e.g. window
