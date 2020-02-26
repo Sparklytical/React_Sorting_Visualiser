@@ -4,7 +4,7 @@
   "description": "Visualization of working of well known algorithms with best representation.",
   "repository": {
     "type": "git",
-    "url": "git://github.com/shubham-shinde/React_Sorting_Visualizer"
+    "url": "git://github.com/EvilSpark/React_Sorting_Visualiser"
   },
   "engines": {
     "npm": ">=5",

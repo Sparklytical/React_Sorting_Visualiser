@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom';
 import logo from '../../images/logo.png';
 import './Header.scss';
 import shivam from '../../images/shivam.jpg';
-import shubham from '../../images/shubham.jpg';
 import kamran from '../../images/kamran.jpg';
+import shubham from '../../images/shubham.jpg';
 import FaExternalLinkAlt from 'react-icons/lib/fa/external-link.js';
 import GoMarkGithub from 'react-icons/lib/go/mark-github.js';
 // components
@@ -21,7 +21,7 @@ function Header() {
       <div className="side-tray" alt="react-boilerplate - Logo">
         <div className="Head_logo">
           <div className="logo">
-            <img src={logo} alt="proflogoile"></img>
+            <img src={logo}></img>
           </div>
           <div className="heading">
             <h1>
@@ -60,20 +60,7 @@ function Header() {
           </div>
           <div className="portfolio">
             <div className="photo">
-              <img src={kamran} alt="profile"></img>
-            </div>
-            <div className="text_p">
-              <div>Kamran Tahir</div>
-              <div className="text_p_link">
-                <a href="https://github.com/EvilSpark">
-                  Portfolio <FaExternalLinkAlt />
-                </a>{' '}
-              </div>
-            </div>
-          </div>
-          <div className="portfolio">
-            <div className="photo">
-              <img src={shubham} alt="profile"></img>
+              <img src={shubham}></img>
             </div>
             <div className="text_p">
               <div>Shubham Shinde</div>
@@ -86,7 +73,20 @@ function Header() {
           </div>
           <div className="portfolio">
             <div className="photo">
-              <img src={shivam} alt="profile"></img>
+              <img src={kamran}></img>
+            </div>
+            <div className="text_p">
+              <div>Kamran Tahir</div>
+              <div className="text_p_link">
+                <a href="https://github.com/EvilSpark">
+                  Portfolio <FaExternalLinkAlt />
+                </a>{' '}
+              </div>
+            </div>
+          </div>
+          <div className="portfolio">
+            <div className="photo">
+              <img src={shivam}></img>
             </div>
             <div className="text_p">
               <div>Shivam Srivastava</div>

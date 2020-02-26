@@ -46,17 +46,7 @@ module.exports = require('./webpack.base.babel')({
       chunks: 'all',
       maxInitialRequests: 10,
       minSize: 0,
-      cacheGroups: {
-        vendor: {
-          test: /[\\/]node_modules[\\/]/,
-          name(module) {
-            const packageName = module.context.match(
-              /[\\/]node_modules[\\/](.*?)([\\/]|$)/,
-            )[1];
-            return `npm.${packageName.replace('@', '')}`;
-          },
-        },
-      },
+      cacheGroups: {},
     },
   },
 
@@ -111,20 +101,20 @@ module.exports = require('./webpack.base.babel')({
     }),
 
     new WebpackPwaManifest({
-      name: 'Algo Visualizer',
-      short_name: 'Algo Visualizer',
-      description: 'Best representation of algorithms',
+      name: 'React_sorting_visualiser',
+      short_name: 'React_sorting_visualiser',
+      description: 'My React_sorting_visualiser-based project!',
       background_color: '#fafafa',
-      theme_color: '#141927',
+      theme_color: '#FF00FF',
       inject: true,
       ios: true,
       icons: [
         {
-          src: path.resolve('app/images/logo.png'),
+          src: path.resolve('app/images/icon-512x512.png'),
           sizes: [72, 96, 128, 144, 192, 384, 512],
         },
         {
-          src: path.resolve('app/images/logo.png'),
+          src: path.resolve('app/images/icon-512x512.png'),
           sizes: [120, 152, 167, 180],
           ios: true,
         },
