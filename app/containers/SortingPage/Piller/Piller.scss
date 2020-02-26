@@ -1,0 +1,18 @@
+.piller {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  position: relative;
+  text-align: center;
+
+  .pointer {
+    height: 8px;
+    width: 100%;
+    background: #FFFF;
+    position: absolute;
+    bottom: -12px;
+    // border-radius: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    flex-grow: 1;
+  }
+}

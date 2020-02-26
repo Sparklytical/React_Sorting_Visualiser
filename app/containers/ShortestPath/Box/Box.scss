@@ -1,0 +1,19 @@
+.box {
+  display: flex;
+  flex-grow: 1;
+  background-color: black;
+  border: 1px solid #141927;
+  width: 100%;
+  height: rem;
+}
+
+//   @include onlyformobie(){
+//     width: '';
+//   }
+// }
+
+// @media screen and (max-width:700px) {
+//   .box {
+//     height: 2rem;
+//   }
+// }

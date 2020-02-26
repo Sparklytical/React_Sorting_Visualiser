@@ -1,0 +1,178 @@
+.algorithmlist {
+  list-style-type: none;
+  margin: auto;
+  width: 100%;
+
+  .buttons {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    display: flex;
+    flex-flow: wrap;
+    align-content: stretch;
+
+    // justify-content: space-between;
+    li {
+      flex-grow: 1;
+      min-width: 9rem;
+
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        display: inline-block;
+        font-size: 16px;
+      }
+
+      .tooltip .text {
+        visibility: hidden;
+        align-content: stretch;
+        min-width: 8.2rem;
+        width: calc(100% - 1rem);
+        ;
+        background-color: grey;
+        color: black;
+        text-align: center;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        padding: 10px 0;
+        position: absolute;
+        z-index: 1;
+        top: -120%;
+        left: -1.5%;
+
+        a {
+          text-decoration: none;
+          color: black;
+          width: inherit;
+          width: calc(100% - 1rem);
+          align-content: stretch;
+        }
+
+        a:hover {
+          color: #753f8d;
+        }
+      }
+
+      .tooltip:hover .text {
+        visibility: visible;
+      }
+
+      button {
+        background: none;
+        border: 2px solid #95386D;
+        font: inherit;
+        width: calc(100% - 1rem);
+        line-height: 1;
+        margin: 0.5rem;
+        padding: 0.5rem;
+        position: relative;
+
+        .hyper {
+          //  position: absolute;
+          display: inline-block;
+          color: white;
+          text-decoration: none;
+          // background-color: blueviolet;
+          // border-radius: 50%;
+          // margin-left: 0.5rem;
+          // -webkit-transform: translate(0, 0.5rem);
+          // transform: translate(0, 0);
+          // transition: color 0.25s, opacity 0.125s 0.25s, -webkit-transform 0.25s 0.25s;
+          // transition: transform 0.25s 0.25s, color 0.25s, opacity 0.125s 0.25s;
+          // transition: transform 0.25s 0.25s, color 0.25s, opacity 0.125s 0.25s, -webkit-transform 0.25s 0.25s;
+          opacity: 1;
+        }
+
+        // .hyper:focus{
+        //   opacity: 1;
+        //   color: #536dfe;
+        //   }
+        //   .hyper:hover{
+        //     color:#e7e7e7;
+        //     opacity: 1;
+        //   }
+
+
+      }
+
+      .active {
+        color: #e7e7e7;
+        background-color: #95386b;
+        outline: none;
+      }
+
+      .inactive {
+        color: #e7e7e7;
+        background-color: #0b0e11;
+        border-color: hsl(227, 10%, 10%);
+        outline: none;
+      }
+    }
+  }
+}
+
+$colors: (fill: #a972cb,
+  pulse: #ef6eae,
+  close: #ff7f82,
+  raise: #ffa260,
+  up: #e4cb58,
+  slide: #8fc866,
+  offset: #19bc8b);
+
+// Sass variables compile to a static string; CSS variables are dynamic and inherited
+// Loop through the map and set CSS custom properties using Sass variables
+@each $button,
+$color in $colors {
+  .#{$button} {
+    --color: #95386b;
+    --hover: #753f8d;
+  }
+}
+
+// Now every button will have different colors as set above. We get to use the same structure, only changing the custom properties.
+button {
+  color: var(--color);
+  transition: 0.25s;
+
+  &:hover,
+  &:focus {
+    border-color: var(--hover);
+    color: #fff;
+  }
+}
+
+//=== Pen styling, ignore
+// body {
+//   color: #fff;
+//   background: hsl(227, 10%, 10%);
+//   font: 300 1em 'Fira Sans', sans-serif;
+
+//   // Center everything ever
+//   justify-content: center;
+//   align-content: center;
+//   align-items: center;
+//   text-align: center;
+//   min-height: 100vh;
+//   display: flex;
+// }
+
+// Basic button styles
+.button {
+  button {
+    background: none;
+    border: 2px solid #95386D;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 0.7rem;
+  }
+}
+
+h1 {
+  font-weight: 400;
+}
+
+code {
+  color: #e4cb58;
+  font: inherit;
+}

@@ -1,0 +1,32 @@
+.father {
+  background: #0b0e12;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .SortingBox {
+    display: flex;
+    justify-content: space-around;
+    background-color: #0b0e12;
+    align-items: flex-end;
+    flex-grow: 1;
+
+    .piller {
+      display: flex;
+      justify-content: flex-end;
+      flex-grow: 1px;
+    }
+  }
+
+  .ray {
+    width: 100%;
+    height: 1rem;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 255, 1) 0%,
+      rgba(255, 51, 0, 1) 100%
+    );
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+}

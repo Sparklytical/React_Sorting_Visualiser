@@ -1,0 +1,109 @@
+.Head {
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  position: relative;
+  // margin-bottom: 2rem;
+  // margin-top:1rem;
+
+  .Head_button {
+    display: none;
+    align-items: center;
+
+    .sidebutton {
+      position: absolute;
+      // display: none;
+      border: none;
+      color: white;
+      // border-radius: 50%;
+      background-color: #141927;
+      outline: none;
+      width: 2.5rem;
+      height: 2.5rem;
+
+      .symbol {
+        margin: 0;
+        padding: 0;
+        line-height: 0.4;
+        font-size: 1.5rem;
+        margin-block-start: 0;
+        margin-block-end: 0;
+      }
+    }
+
+    .sidebutton:hover {
+      // color: #5e46a6;
+      // border: 2px solid black;
+      // background-color: black;
+      cursor: pointer;
+    }
+  }
+
+  .Head_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+
+    .logo {
+      font-size: 7rem;
+      // MARGIN-TOP: 1.5REM;
+      margin-right: 0.2rem;
+      transform: rotate(180deg);
+      color: #704091;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .heading {
+      text-align: center;
+      line-height: 2.25rem;
+
+      h1 {
+        color: #c4393c;
+        font-weight: 600;
+      }
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .Head_logo {
+      .logo {
+        width: 4rem;
+        font-size: 4rem;
+      }
+      .heading {
+        line-height: 1.25rem;
+
+        h1 {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    .Head_button {
+      display: none;
+
+      .sidebutton {
+        display: block;
+        position: relative;
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .Head_button {
+      display: block;
+
+      .sidebutton {
+        position: relative;
+
+        .symbol {
+          h1 {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
