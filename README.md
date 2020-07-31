@@ -1,6 +1,6 @@
 ## React_Sorting_Visualizer
 
-This Web App Visualize the Complex Sorting Technique in straightforward. This will really help me in understanding the algorithms. You can see the Demo here https://reactsorting.netlify.com/
+This Web App Visualize the Complex Sorting Technique in straightforward. This will really help me in understanding the algorithms. You can see the Demo here https://reactsortingvisualizer.netlify.app/
 
 ## Types Of Sorting Technique
 
